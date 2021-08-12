@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.col-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s ease;
+  background-color: rgba(14, 122, 13, 0.4);
+  background-image: url('xbox.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.col-left::after {
+  content: '';
+}
+.col-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s ease;
+  background-color: rgba(0, 111, 205, 0.4);
+  background-image: url('ps5.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+h1 {
+  font-size: 36px;
+  color: #fff;
+}
+a {
+  padding: 1.5rem;
+  border: solid 0.3rem rgb(200, 200, 200);
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+a:hover {
+  background-color: #000;
+  color: #fff;
+  /* font-size: 1.2rem; */
+  font-weight: bold;
+}
+
+.col-left.active {
+  flex-grow: 4;
+}
+
+.col-right.active {
+  flex-grow: 4;
+}
